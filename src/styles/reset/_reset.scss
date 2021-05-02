@@ -41,11 +41,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+video, img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
 img {
   -ms-interpolation-mode: bicubic;
   display: inline-block;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
 }
