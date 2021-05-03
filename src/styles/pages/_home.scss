@@ -1,10 +1,18 @@
-// @import '../tools/mixins'; /* temporary */
+@media screen and (min-width: 1000px) {
+	.w-wrapper {
+		display: grid;
+		height: 100vh;
+		grid-template-rows: 1fr auto;
+		justify-content: stretch;
+	}
+}
 
-// home
+// homepage__container
 
 .homepage__container {
 	display: flex;
 	flex-direction: row;
+	height: 100%;
 }
 @media screen and (max-width: 999px) {
 	.homepage__container {
@@ -17,15 +25,13 @@
 	}
 }
 
-.homepage__main__container {
-	padding: 2rem;
-}
-
 // hero
 
 .homepage__hero {
 	position: relative;
 	@include center();
+	color: $WHITE;
+	height: 100%;
 	background-color: $BRAND_BLUE;
 	padding: 3.2rem;
 	overflow: hidden;
@@ -44,18 +50,18 @@
 
 .homepage__hero__image {
 	position: absolute;
-	display: block;
+	display: inline-block;
 	width: 100%;
 	height: 100%;
-	object-fit: fill;
-	object-position: center;
+	object-fit: cover;
+	object-position: right top;
 	user-select: none;
 }
 
 .homepage__hero__icon {
 	position: relative;
 	width: 24.2rem;
-	fill: $WHITE;
+	fill: currentColor;
 	user-select: none;
 	z-index: 1;
 }
@@ -74,11 +80,36 @@
 }
 @media screen and (min-width: 1000px) {
 	.homepage__main {
+		display: flex;
+		align-items: center;
+		height: 100%;
+
 		flex-basis: 50%;
 	}
 }
 
+.man__container {
+	padding: 2rem;
+}
+@media screen and (min-width: 501px) and (max-width: 999px) {
+	.man__container {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.man__container {
+		width: auto;
+		justify-self: flex-end;
+		margin: 0 auto;
+	}
+}
+
 // title
+
+.homepage__header {
+	padding-bottom: 1.2rem;
+}
 
 .homepage__header-icon {
 	width: 4.5rem;
@@ -96,6 +127,7 @@
 
 .homepage__title {
 	font-size: map-get($FONT_SIZE_DISPLAY, XXLARGE);
+	line-height: 1.2;
 	letter-spacing: -0.15rem;
 	margin: 4rem 0;
 }
@@ -122,11 +154,17 @@
 		@include center(column);
 	}
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 501px) and (max-width: 999px) {
 	.homepage__account-setup {
 		@include center();
-		justify-content: space-between;
-		float: left;
+		width: auto;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.homepage__account-setup {
+		@include center(column);
+		align-items: flex-start;
+		justify-content: flex-start;
 	}
 }
 
@@ -134,7 +172,7 @@
 	@include center();
 	@include font-default();
 	color: $WHITE;
-	font-size: map-get($FONT_SIZE_DISPLAY, DEFAULT);
+	font-size: map-get($FONT_SIZE_BTN, DEFAULT);
 	font-weight: 650;
 	min-height: 4.8rem;
 	width: 100%;
@@ -157,14 +195,17 @@
 		cursor: pointer;
 	}
 
+	&:active {
+		background-color: $BTN_HOVER;
+	}
+
 	&:focus {
 		background-color: $BTN_HOVER;
 		box-shadow: $OUTLINE_FOCUS;
 		outline: none;
 	}
 
-	&:visited,
-	&:active {
+	&:visited {
 		color: $WHITE;
 	}
 
@@ -174,6 +215,10 @@
 		border: 0.1rem solid $BRAND_BLUE;
 
 		&:hover {
+			background-color: $BTN_OUTLINE_HOVER;
+		}
+
+		&:active {
 			background-color: $BTN_OUTLINE_HOVER;
 		}
 
@@ -188,10 +233,17 @@
 		flex: 1 1 100%;
 	}
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 501px) and (max-width: 999px) {
 	.btn-link {
-		max-width: 38rem;
-		flex: 1 1 45%;
+		flex: 1 1 100%;
+	}
+	.btn-link:not(:last-of-type) {
+		margin-right: 2.4rem;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.btn-link {
+		width: 38rem;
 	}
 }
 
@@ -205,29 +257,24 @@
 .footer__links {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	width: 100%;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
-@media screen and (max-width: 500px) {
-	.footer__links {
-		flex-wrap: wrap;
-	}
-}
 
 .footer__link {
-	margin: 0.4rem 0;
-
-	&:not(:last-of-type) {
-		padding: 0 0.8rem;
-	}
+	padding: 0 0.8rem;
+	margin: 0.35rem 0;
 }
 
 .footer__link__item {
+	display: inline-block;
 	color: $GREY_513;
 	font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
 	text-decoration: none;
+	vertical-align: baseline;
 	white-space: nowrap;
 
 	&:hover {
@@ -239,12 +286,4 @@
 		color: $GREY_513;
 		text-decoration: none;
 	}
-}
-
-.footer__copy {
-	display: inline-block;
-	color: $GREY_513;
-	font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
-	text-align: center;
-	margin: 0.4rem 0;
 }
