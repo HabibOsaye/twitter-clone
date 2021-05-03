@@ -5,4 +5,27 @@
 @import 'breakpoints';
 @import 'functions';
 
-//
+/* ============ @MIXINS ============ */
+// flex
+
+@mixin center($FLEX_DIRECTION: row) {
+	display: flex;
+	flex-direction: $FLEX_DIRECTION;
+	align-items: center;
+	justify-content: center;
+}
+
+// font display
+@mixin font-display {
+	color: $BLACK_185;
+	font-family: map-get($FONT_DISPLAY, FONT_FAMILY);
+	font-weight: map-get($FONT_DISPLAY, FONT_WEIGHT);
+	font-style: map-get($FONT_DISPLAY, FONT_STYLE);
+}
+
+@mixin font-default($FONT_WEIGHT: FONT_WEIGHT) {
+	color: $BLACK_185;
+	font-family: map-get($FONT_DEFAULT, FONT_FAMILY);
+	font-weight: map-get($FONT_DEFAULT, $FONT_WEIGHT);
+	font-style: map-get($FONT_DEFAULT, FONT_STYLE);
+}
