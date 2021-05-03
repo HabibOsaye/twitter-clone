@@ -88,20 +88,18 @@
 	}
 }
 
-.man__container {
+.main__container {
 	padding: 2rem;
 }
 @media screen and (min-width: 501px) and (max-width: 999px) {
-	.man__container {
+	.main__container {
 		max-width: 600px;
 		margin: 0 auto;
 	}
 }
 @media screen and (min-width: 1000px) {
-	.man__container {
-		width: auto;
+	.main__container {
 		justify-self: flex-end;
-		margin: 0 auto;
 	}
 }
 
