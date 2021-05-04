@@ -3,7 +3,6 @@
 		display: grid;
 		height: 100vh;
 		grid-template-rows: 1fr auto;
-		justify-content: stretch;
 	}
 }
 
@@ -119,13 +118,14 @@
 .homepage__title,
 .homepage__sub {
 	@include font-display();
+	color: $BLACK_185;
 	margin: 0;
 	padding: 0;
 }
 
 .homepage__title {
 	font-size: map-get($FONT_SIZE_DISPLAY, XXLARGE);
-	line-height: 1.2;
+	line-height: 1.15;
 	letter-spacing: -0.15rem;
 	margin: 4rem 0;
 }
@@ -166,82 +166,30 @@
 	}
 }
 
-.btn-link {
-	@include center();
-	@include font-default();
-	color: $WHITE;
-	font-size: map-get($FONT_SIZE_BTN, DEFAULT);
-	font-weight: 650;
-	min-height: 4.8rem;
-	width: 100%;
-	padding: 0 3.2rem;
-	margin-bottom: 1.6rem;
-	background: none;
-	background-color: $BRAND_BLUE;
-	text-decoration: none;
-	white-space: nowrap;
-	border-radius: 2.4rem;
-	box-shadow: $OUTLINE_DEFAULT;
-	outline: none;
-	user-select: none;
-	overflow: hidden;
-	transition: background-color $TRANSITION_SPEED $TRANSITION_EASE,
-		box-shadow $TRANSITION_SPEED $TRANSITION_EASE;
-
-	&:hover {
-		background-color: $BTN_HOVER;
-		cursor: pointer;
-	}
-
-	&:active {
-		background-color: $BTN_HOVER;
-	}
-
-	&:visited {
-		color: $WHITE;
-	}
-
-	&:focus {
-		background-color: $BTN_HOVER;
-		box-shadow: $OUTLINE_FOCUS;
-		outline: none;
-	}
-
-	&.btn-link--outline {
-		color: $BRAND_BLUE;
-		background-color: transparent;
-		border: 0.1rem solid $BRAND_BLUE;
-
-		&:hover {
-			background-color: $BTN_OUTLINE_HOVER;
-		}
-
-		&:active {
-			background-color: $BTN_OUTLINE_HOVER;
-		}
-
-		&:focus {
-			background-color: $BTN_OUTLINE_HOVER;
-		}
-	}
-}
+//  form buttons
 
 @media screen and (max-width: 500px) {
-	.btn-link {
-		flex: 1 1 100%;
+	.homepage__container {
+		.btn-link {
+			flex: 1 1 100%;
+		}
 	}
 }
 @media screen and (min-width: 501px) and (max-width: 999px) {
-	.btn-link {
-		flex: 1 1 100%;
-	}
-	.btn-link:not(:last-of-type) {
-		margin-right: 2.4rem;
+	.homepage__container {
+		.btn-link {
+			flex: 1 1 100%;
+		}
+		.btn-link:not(:last-of-type) {
+			margin-right: 2.4rem;
+		}
 	}
 }
 @media screen and (min-width: 1000px) {
-	.btn-link {
-		width: 38rem;
+	.homepage__container {
+		.btn-link {
+			width: 38rem;
+		}
 	}
 }
 
@@ -263,41 +211,12 @@
 }
 
 .footer__link {
-	padding: 0 0.8rem;
 	margin: 0.35rem 0;
 }
 
 .footer__link__item {
-	display: inline-block;
-	color: $GREY_513;
-	font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
-	text-decoration: none;
-	vertical-align: baseline;
-	white-space: nowrap;
-	outline: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
-
-	&:visited,
-	&:active {
-		color: $GREY_513;
+	.footer__copy {
 		text-decoration: none;
-	}
-
-	&:focus {
-		text-decoration: underline;
-	}
-}
-
-.footer__link__item.footer__copy {
-	outline: none;
-
-	&:hover {
-		text-decoration: none;
-	}
-	&:focus {
-		text-decoration: none;
+		outline: none;
 	}
 }
