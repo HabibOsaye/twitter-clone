@@ -1,0 +1,44 @@
+// links
+
+.link {
+	display: inline-block;
+	color: $GREY_513;
+	font-size: map-get($FONT_SIZE_DEFAULT, DEFAULT);
+	vertical-align: baseline;
+	padding: 0 0.8rem;
+	margin: 0;
+	text-decoration: none;
+	white-space: nowrap;
+	outline: none;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:visited,
+	&:active {
+		color: $GREY_513;
+	}
+
+	&:focus {
+		text-decoration: underline;
+		outline: none;
+	}
+
+	&.link-sm {
+		font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
+	}
+
+	&.link--alt {
+		color: $BRAND_BLUE;
+	}
+}
+
+:not(a.link) {
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
