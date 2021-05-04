@@ -26,3 +26,9 @@ body {
 	font-size: 1.6rem;
 	line-height: 1.15;
 }
+
+@media screen and (min-width: 500px) {
+	body {
+		overflow-y: scroll;
+	}
+}
