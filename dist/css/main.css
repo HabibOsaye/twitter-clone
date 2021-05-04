@@ -694,8 +694,9 @@ body {
 
 @media screen and (min-width: 1000px) {
   .homepage__hero {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
   }
 }
 
@@ -747,8 +748,9 @@ body {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
   }
 }
 
