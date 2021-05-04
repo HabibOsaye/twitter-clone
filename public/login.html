@@ -29,13 +29,15 @@
           <label for="userAccount" class="label-wrapper">
             <h3 class="visually-hidden">Enter your phone, email or username</h3>
             <div class="label-wrapper__placeholder">
-              <input id="userAccount" class="modal__form-input" type="text">
+              <div class="placeholder" aria-hidden="true">Phone, email or username</div>
+              <input id="userAccount" class="modal__form-input" type="text" required>
             </div>
           </label>
           <label for="userPassword" class="label-wrapper">
             <h3 class="visually-hidden">Enter password</h3>
             <div class="label-wrapper__placeholder">
-              <input id="userPassword" class="modal__form-input" type="password">
+              <div class="placeholder" aria-hidden="true">Password</div>
+              <input id="userPassword" class="modal__form-input text-bull" type="password" required>
             </div>
           </label>
           <button class="btn" type="submit">Log in</button>
