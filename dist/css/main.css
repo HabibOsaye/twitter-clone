@@ -442,6 +442,12 @@ body {
   line-height: 1.15;
 }
 
+@media screen and (min-width: 500px) {
+  body {
+    overflow-y: scroll;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   display: block;
@@ -455,6 +461,170 @@ body {
           clip-path: inset(1px);
 }
 
+.btn, .btn-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #0f1419;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, "Helvetica Neue", "Helvetica", "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 650;
+  min-height: 4.8rem;
+  width: 100%;
+  max-width: 48rem;
+  padding: 0 3.2rem;
+  margin-bottom: 1.6rem;
+  background: none;
+  background-color: #1da1f2;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 0 solid transparent;
+  border-radius: 99rem;
+  -webkit-box-shadow: 0 0 0 2px transparent;
+          box-shadow: 0 0 0 2px transparent;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  -webkit-transition: background-color 200ms ease, -webkit-box-shadow 200ms ease;
+  transition: background-color 200ms ease, -webkit-box-shadow 200ms ease;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+  transition: background-color 200ms ease, box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
+}
+
+.btn:hover, .btn-link:hover {
+  background-color: #1a91da;
+  cursor: pointer;
+}
+
+.btn:active, .btn-link:active {
+  background-color: #1a91da;
+}
+
+.btn:visited, .btn-link:visited {
+  color: #fff;
+}
+
+.btn:focus, .btn-link:focus {
+  background-color: #1a91da;
+  -webkit-box-shadow: 0px 0px 0px 2px #90d1f9;
+          box-shadow: 0px 0px 0px 2px #90d1f9;
+  outline: none;
+}
+
+.btn.btn--outline, .btn--outline.btn-link {
+  color: #1da1f2;
+  background-color: transparent;
+  border: 0.1rem solid #1da1f2;
+}
+
+.btn.btn--outline:hover, .btn--outline.btn-link:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.btn.btn--outline:active, .btn--outline.btn-link:active {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.btn.btn--outline:focus, .btn--outline.btn-link:focus {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.btn-link:hover {
+  background-color: #1a91da;
+  cursor: pointer;
+}
+
+.btn-link:active {
+  background-color: #1a91da;
+}
+
+.btn-link:visited {
+  color: #fff;
+}
+
+.btn-link:focus {
+  background-color: #1a91da;
+  -webkit-box-shadow: 0px 0px 0px 2px #90d1f9;
+          box-shadow: 0px 0px 0px 2px #90d1f9;
+  outline: none;
+}
+
+.btn-link.btn-link--outline {
+  color: #1da1f2;
+  background-color: transparent;
+  border: 0.1rem solid #1da1f2;
+}
+
+.btn-link.btn-link--outline:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.btn-link.btn-link--outline:active {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.btn-link.btn-link--outline:focus {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.link {
+  display: inline-block;
+  color: #5b7083;
+  font-size: 1.5rem;
+  vertical-align: baseline;
+  padding: 0 0.8rem;
+  margin: 0;
+  text-decoration: none;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:visited, .link:active {
+  color: #5b7083;
+}
+
+.link:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+.link.link-sm {
+  font-size: 1.3rem;
+}
+
+.link.link--alt {
+  color: #1da1f2;
+}
+
+:not(a.link) {
+  text-decoration: none;
+}
+
+:not(a.link):hover, :not(a.link):focus {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 1000px) {
   .w-wrapper {
     display: -ms-grid;
@@ -462,9 +632,6 @@ body {
     height: 100vh;
     -ms-grid-rows: 1fr auto;
         grid-template-rows: 1fr auto;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
   }
 }
 
@@ -619,13 +786,14 @@ body {
   font-family: "Chirp", -apple-system, BlinkMacSystemFont, Segoe UI, "Helvetica Neue", "Helvetica", "Roboto", Arial, sans-serif;
   font-weight: 900;
   font-style: normal;
+  color: #0f1419;
   margin: 0;
   padding: 0;
 }
 
 .homepage__title {
   font-size: 6.4rem;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: -0.15rem;
   margin: 4rem 0;
 }
@@ -708,90 +876,8 @@ body {
   }
 }
 
-.btn-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #0f1419;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, "Helvetica Neue", "Helvetica", "Roboto", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 650;
-  min-height: 4.8rem;
-  width: 100%;
-  padding: 0 3.2rem;
-  margin-bottom: 1.6rem;
-  background: none;
-  background-color: #1da1f2;
-  text-decoration: none;
-  white-space: nowrap;
-  border-radius: 2.4rem;
-  -webkit-box-shadow: 0 0 0 2px transparent;
-          box-shadow: 0 0 0 2px transparent;
-  outline: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  overflow: hidden;
-  -webkit-transition: background-color 200ms ease, -webkit-box-shadow 200ms ease;
-  transition: background-color 200ms ease, -webkit-box-shadow 200ms ease;
-  transition: background-color 200ms ease, box-shadow 200ms ease;
-  transition: background-color 200ms ease, box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
-}
-
-.btn-link:hover {
-  background-color: #1a91da;
-  cursor: pointer;
-}
-
-.btn-link:active {
-  background-color: #1a91da;
-}
-
-.btn-link:visited {
-  color: #fff;
-}
-
-.btn-link:focus {
-  background-color: #1a91da;
-  -webkit-box-shadow: 0px 0px 0px 2px #90d1f9;
-          box-shadow: 0px 0px 0px 2px #90d1f9;
-  outline: none;
-}
-
-.btn-link.btn-link--outline {
-  color: #1da1f2;
-  background-color: transparent;
-  border: 0.1rem solid #1da1f2;
-}
-
-.btn-link.btn-link--outline:hover {
-  background-color: rgba(29, 161, 242, 0.1);
-}
-
-.btn-link.btn-link--outline:active {
-  background-color: rgba(29, 161, 242, 0.1);
-}
-
-.btn-link.btn-link--outline:focus {
-  background-color: rgba(29, 161, 242, 0.1);
-}
-
 @media screen and (max-width: 500px) {
-  .btn-link {
+  .homepage__container .btn-link {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
@@ -799,18 +885,18 @@ body {
 }
 
 @media screen and (min-width: 501px) and (max-width: 999px) {
-  .btn-link {
+  .homepage__container .btn-link {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
   }
-  .btn-link:not(:last-of-type) {
+  .homepage__container .btn-link:not(:last-of-type) {
     margin-right: 2.4rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .btn-link {
+  .homepage__container .btn-link {
     width: 38rem;
   }
 }
@@ -836,42 +922,130 @@ body {
 }
 
 .footer__link {
-  padding: 0 0.8rem;
   margin: 0.35rem 0;
 }
 
-.footer__link__item {
-  display: inline-block;
-  color: #5b7083;
-  font-size: 1.3rem;
+.footer__link__item .footer__copy {
   text-decoration: none;
-  vertical-align: baseline;
-  white-space: nowrap;
   outline: none;
 }
 
-.footer__link__item:hover {
-  text-decoration: underline;
+/* LOGIN */
+.m-wrapper {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  padding: 0 1.6rem;
+  margin-top: 2.4rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.footer__link__item:visited, .footer__link__item:active {
+.modal__account-setup {
+  width: 100%;
+}
+
+.modal__header {
+  margin: 0 1.6rem;
+}
+
+.modal__header .header-icon {
+  width: 4rem;
+  height: 4rem;
+  fill: #1da1f2;
+}
+
+.modal__title {
+  color: #0f1419;
+  font-family: "Chirp", -apple-system, BlinkMacSystemFont, Segoe UI, "Helvetica Neue", "Helvetica", "Roboto", Arial, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3.1rem;
+  line-height: 1.15;
+  letter-spacing: -0.05rem;
+  padding: 0;
+  margin: 3.2rem 0 1.2rem;
+}
+
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.modal__form .btn, .modal__form .btn-link {
+  margin: 1.2rem;
+}
+
+.label-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  min-height: 5.6rem;
+  padding: 1.2rem 0.8rem 0.8rem;
+  margin-top: 1.6rem;
+  border: 1px solid #c4cfd6;
+  border-radius: 0.4rem;
+}
+
+.label-wrapper:focus-within {
+  border: 1px solid #1da1f2;
+  -webkit-box-shadow: 0 0 0 0.1rem #1da1f2;
+          box-shadow: 0 0 0 0.1rem #1da1f2;
+}
+
+.modal__form-input {
+  display: block;
   color: #5b7083;
-  text-decoration: none;
-}
-
-.footer__link__item:focus {
-  text-decoration: underline;
-}
-
-.footer__link__item.footer__copy {
+  font-size: 1.7rem;
+  line-height: 1rem;
+  width: 100%;
+  padding: 0 0.15rem;
+  border: none;
   outline: none;
 }
 
-.footer__link__item.footer__copy:hover {
-  text-decoration: none;
+.modal__form-input:focus {
+  outline: none;
 }
 
-.footer__link__item.footer__copy:focus {
-  text-decoration: none;
+.modal__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #5b7083;
+}
+
+.modal__link__item {
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
