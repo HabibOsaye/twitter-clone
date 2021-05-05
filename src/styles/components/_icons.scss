@@ -1,0 +1,45 @@
+// ICONS
+
+.icon {
+	display: inline-block;
+	max-width: 5.6rem;
+	height: auto;
+	flex: 0 auto;
+}
+
+// SIZE
+
+// small
+.icon {
+	&.icon--sm {
+		max-width: 2.4rem;
+	}
+}
+
+// medium
+.icon {
+	&.icon--md {
+		max-width: 3.2rem;
+	}
+}
+
+// large
+.icon {
+	&.icon--lg {
+		width: 4rem;
+	}
+}
+
+// xlarge
+.icon {
+	&.icon--xl {
+		width: 5.6rem;
+	}
+}
+
+// xxlarge
+.icon {
+	&.icon--xxl {
+		width: 7.2rem;
+	}
+}
