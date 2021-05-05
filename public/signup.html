@@ -7,11 +7,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
   <title>Twitter</title>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="./dist/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/dist/css/main.css">
 </head>
 
 <body>
+  <div class="w-wrapper">
+    <div class="modal is-overlay">
+      <div class="m-wrapper m-wrapper--lg">
+        <main class="modal__main" aria-labelledby="accountSetup" aria-modal="true">
+          <form action="" method="get" class="form">
+            <div class="modal__header">
+              <div class="header__icon header__icon--center" aria-hidden="true">
+                <svg class="icon icon--md" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                  <g>
+                    <path
+                      d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <h1 id="accountSetup" class="modal__title" hidden>Sign up for Twitter</h1>
+            </div>
+            <section action="" class="modal__form">
+              <label for="userAccount" class="label-wrapper">
+                <h3 class="visually-hidden">Enter your username</h3>
+                <div class="label-wrapper__placeholder">
+                  <div class="placeholder" aria-hidden="true">Username</div>
+                  <input id="userAccount" class="modal__form-input" type="tel">
+                </div>
+              </label>
+              <label for="userEmail" class="label-wrapper">
+                <h3 class="visually-hidden">Enter your email</h3>
+                <div class="label-wrapper__placeholder">
+                  <div class="placeholder" aria-hidden="true">Email</div>
+                  <input id="userEmail" class="modal__form-input" type="email">
+                </div>
+              </label>
 
+              <label for="userPhone" class="label-wrapper" hidden>
+                <h3 class="visually-hidden">Enter your email</h3>
+                <div class="label-wrapper__placeholder">
+                  <div class="placeholder" aria-hidden="true">Email</div>
+                  <input id="userPhone" class="modal__form-input" type="email">
+                </div>
+              </label>
+
+              <div class="form__group">
+                <button class="btn btn__link">Use phone instead</button>
+              </div>
+              <div class="form__group">
+                <h3 class="header__copy">Date of birth</h3>
+                <p class="details__copy">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, nobis culpa. Laboriosam eaque iure facere quisquam exercitationem
+                </p>
+              </div>
+              <div class="label-wrapper__group">
+                <label for="userBirthMonth" class="label-wrapper">
+                  <h3 class="visually-hidden">Select birth month</h3>
+                  <div class="label-wrapper__placeholder">
+                    <div class="placeholder" aria-hidden="true">Month</div>
+                    <input id="userBirthMonth" class="modal__form-input text-bull" type="text" required>
+                  </div>
+                </label>
+
+                <label for="userBirthDay" class="label-wrapper">
+                  <h3 class="visually-hidden">Select day of month</h3>
+                  <div class="label-wrapper__placeholder">
+                    <div class="placeholder" aria-hidden="true">Day</div>
+                    <input id="userBirthDay" class="modal__form-input text-bull" type="text" required>
+                  </div>
+                </label>
+
+                <label for="userBirthYear" class="label-wrapper">
+                  <h3 class="visually-hidden">Select birth year</h3>
+                  <div class="label-wrapper__placeholder">
+                    <div class="placeholder" aria-hidden="true">Year</div>
+                    <input id="userBirthYear" class="modal__form-input text-bull" type="text" required>
+                  </div>
+                </label>
+              </div>
+              <button class="btn btn-lg" type="submit">Log in</button>
+            </section>
+            <div class="header__btn">
+              <h3 class="visually-hidden">Submit to continue your Twitter account creation</h3>
+              <button class="btn btn-sm" type="submit" disabled>Sign up</button>
+            </div>
+          </form>
+          <section class="modal__links" aria-labelledby="helpLinks">
+            <h3 id="helpLinks" class="visually-hidden">Having trouble? try using these links</h3>
+            <a href="/public/signup.html" class="modal__link__item link link--alt">Forgot password?</a>
+            ·
+            <a href="/public/login.html" class="modal__link__item link link--alt">Sign up for Twitter</a>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

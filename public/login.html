@@ -7,48 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
   <title>Login on Twitter / Twitter</title>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="../dist/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/dist/css/main.css">
 </head>
 
 <body>
   <div class="w-wrapper">
-    <div class="m-wrapper">
-      <main class="modal__account-setup" aria-labelledby="accountSetup" aria-modal="true">
-
-        <div class="modal__header">
-          <svg class="header-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
-            <g>
-              <path
-                d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z">
-              </path>
-            </g>
-          </svg>
-          <h1 id="accountSetup" class="modal__title">Log in to Twitter</h1>
-        </div>
-        <form action="" class="modal__form">
-          <label for="userAccount" class="label-wrapper">
-            <h3 class="visually-hidden">Enter your phone, email or username</h3>
-            <div class="label-wrapper__placeholder">
-              <div class="placeholder" aria-hidden="true">Phone, email or username</div>
-              <input id="userAccount" class="modal__form-input" type="text" required>
+    <div class="modal">
+      <div class="m-wrapper">
+        <main class="modal__main" aria-labelledby="accountSetup" aria-modal="true">
+          <form action="" method="get" class="form">
+            <div class="modal__header">
+              <div class="header__icon" aria-hidden="true">
+                <svg class="icon icon--lg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                  <g>
+                    <path
+                      d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <h1 id="accountSetup" class="modal__title">Log in to Twitter</h1>
             </div>
-          </label>
-          <label for="userPassword" class="label-wrapper">
-            <h3 class="visually-hidden">Enter password</h3>
-            <div class="label-wrapper__placeholder">
-              <div class="placeholder" aria-hidden="true">Password</div>
-              <input id="userPassword" class="modal__form-input text-bull" type="password" required>
-            </div>
-          </label>
-          <button class="btn" type="submit">Log in</button>
-        </form>
-        <section class="modal__links" aria-labelledby="helpLinks">
-          <h3 id="helpLinks" class="visually-hidden">Having trouble? try using these links</h3>
-          <a href="./public/signup.html" class="modal__link__item link link--alt">Forgot password?</a>
-          ·
-          <a href="./public/login.html" class="modal__link__item link link--alt">Sign up for Twitter</a>
-        </section>
-      </main>
+            <section action="" class="modal__form">
+              <label for="userAccount" class="label-wrapper">
+                <h3 class="visually-hidden">Enter your phone, email or username</h3>
+                <div class="label-wrapper__placeholder">
+                  <div class="placeholder" aria-hidden="true">Phone, email or username</div>
+                  <input id="userAccount" class="modal__form-input" type="text" required>
+                </div>
+              </label>
+              <label for="userPassword" class="label-wrapper">
+                <h3 class="visually-hidden">Enter password</h3>
+                <div class="label-wrapper__placeholder">
+                  <div class="placeholder" aria-hidden="true">Password</div>
+                  <input id="userPassword" class="modal__form-input text-bull" type="password" required>
+                </div>
+              </label>
+              <button class="btn btn-lg" type="submit">Log in</button>
+            </section>
+          </form>
+          <section class="modal__links" aria-labelledby="helpLinks">
+            <h3 id="helpLinks" class="visually-hidden">Having trouble? try using these links</h3>
+            <a href="#!" class="modal__link__item link link--alt">Forgot password?</a>
+            ·
+            <a href="/public/signup.html" class="modal__link__item link link--alt">Sign up for Twitter</a>
+          </section>
+        </main>
+      </div>
     </div>
   </div>
 </body>
