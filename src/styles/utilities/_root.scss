@@ -32,16 +32,3 @@ body {
 		overflow-y: scroll;
 	}
 }
-
-// password bullets
-
-[type='password'].text-bull {
-	display: inline-block;
-	font-family: 'text-bull' !important;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	letter-spacing: 0.175em;
-	// speak: none;
-}
