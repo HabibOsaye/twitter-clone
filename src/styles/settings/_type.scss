@@ -1,3 +1,5 @@
+// TYPOGRAHY
+
 // font smoothing
 $FONT_SMOOTHING_MOZ: grayscale;
 $FONT_SMOOTHING_WEBKIT: antialiased;
@@ -12,7 +14,7 @@ $FONT_CHIRP: 'Chirp', $FONT_FALLBACK;
 // variants
 $FONT_DEFAULT: (
 	FONT_FAMILY: $FONT_FALLBACK,
-	FONT_WEIGHT: 400,
+	// FONT_WEIGHT: 400,
 	FONT_STYLE: normal,
 );
 
@@ -20,6 +22,14 @@ $FONT_DISPLAY: (
 	FONT_FAMILY: $FONT_CHIRP,
 	FONT_WEIGHT: 900,
 	FONT_STYLE: normal,
+);
+
+// weight
+$FONT_WEIGHT: (
+	NORMAL: 400,
+	MEDIUM: 500,
+	BOLD: 650,
+	DISPLAY: 900,
 );
 
 // size
