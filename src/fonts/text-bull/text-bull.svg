@@ -3,12 +3,12 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>Copyright (C) 2021 by original authors @ fontello.com</metadata>
 <defs>
-<font id="text-bull" horiz-adv-x="1000" >
-<font-face font-family="text-bull" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
-<missing-glyph horiz-adv-x="1000" />
-<glyph glyph-name="bull-2022" unicode="&#x2022;" d="M470 235c0-130-105-235-235-235-130 0-235 105-235 235 0 130 105 235 235 235 130 0 235-105 235-235z" horiz-adv-x="470" />
+<font id="text-bull-2400" horiz-adv-x="2400" >
+<font-face font-family="text-bull-2400" font-weight="400" font-stretch="normal" units-per-em="2400" ascent="2040" descent="-360" />
+<missing-glyph horiz-adv-x="2400" />
+<glyph glyph-name="bull-2022-2400" unicode="&#x2022;" d="M750 591c0-166-134-300-300-300-166 0-300 134-300 300 0 166 134 300 300 300 166 0 300-134 300-300z" horiz-adv-x="900" />
 
-<glyph glyph-name="bull-25cf" unicode="&#x25cf;" d="M470 235c0-130-105-235-235-235-130 0-235 105-235 235 0 130 105 235 235 235 130 0 235-105 235-235z" horiz-adv-x="470" />
+<glyph glyph-name="bull-25cf-2400" unicode="&#x25cf;" d="M750 591c0-166-134-300-300-300-166 0-300 134-300 300 0 166 134 300 300 300 166 0 300-134 300-300z" horiz-adv-x="900" />
 </font>
 </defs>
 </svg>
