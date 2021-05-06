@@ -1,24 +1,35 @@
+// window wrapper
+
 .w-wrapper {
 	display: block;
 	height: 100%;
-	width: 100%;
 	background-color: $WHITE;
+	overflow-y: scroll;
 }
-
 @media screen and (min-width: 1000px) {
 	.w-wrapper {
-		display: grid;
-		height: 100vh;
-		grid-template-rows: 1fr auto;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: stretch;
 	}
 }
 
-// homepage__container
+@media screen and (min-width: 701px) {
+	.w-wrapper {
+		&.w-wrapper__fullscreen {
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+		}
+	}
+}
+
+// homepage container
 
 .homepage__container {
 	display: flex;
 	flex-direction: row;
-	height: 100%;
+	height: auto;
 }
 @media screen and (max-width: 999px) {
 	.homepage__container {
@@ -28,6 +39,7 @@
 @media screen and (min-width: 1000px) {
 	.homepage__container {
 		flex-wrap: nowrap;
+		height: 100%;
 	}
 }
 
@@ -37,7 +49,6 @@
 	position: relative;
 	@include center();
 	color: $WHITE;
-	height: 100%;
 	background-color: $BRAND_BLUE;
 	padding: 3.2rem;
 	overflow: hidden;
@@ -122,7 +133,7 @@
 }
 
 .homepage__title,
-.homepage__sub {
+.homepage__subtitle {
 	@include font-display();
 	color: $BLACK_185;
 	margin: 0;
@@ -131,11 +142,10 @@
 
 .homepage__title {
 	font-size: map-get($FONT_SIZE_DISPLAY, XXLARGE);
-	line-height: 1.15;
-	letter-spacing: -0.15rem;
+	line-height: 1;
 	margin: 4rem 0;
 }
-.homepage__sub {
+.homepage__subtitle {
 	display: block;
 	font-size: map-get($FONT_SIZE_DISPLAY, LARGE);
 	margin: 0;
@@ -146,12 +156,12 @@
 		font-size: map-get($FONT_SIZE_DISPLAY, XLARGE);
 		letter-spacing: -0.15rem;
 	}
-	.homepage__sub {
+	.homepage__subtitle {
 		font-size: map-get($FONT_SIZE_DISPLAY, MEDIUM);
 	}
 }
 
-// account setup
+// form
 
 @media screen and (max-width: 500px) {
 	.homepage__account-setup {
@@ -203,8 +213,10 @@
 // footer
 
 .footer {
-	padding: 1.2rem 1.6rem;
+	display: block;
+	height: auto;
 	text-align: center;
+	padding: 1.2rem 1.6rem;
 }
 
 .footer__links {
@@ -212,13 +224,14 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	width: 100%;
+	height: 100%;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
 .footer__link {
-	margin: 0.35rem 0;
+	margin: 0.35rem 0.4rem;
 }
 
 .footer__link__item {

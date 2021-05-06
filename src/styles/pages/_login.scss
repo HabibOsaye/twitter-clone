@@ -1,10 +1,13 @@
-/* LOGIN */
+// MODAL
 
 .modal {
 	width: 100%;
 	height: 100%;
-	padding: 1.2rem 1.2rem;
+}
 
+// modal is-overlay
+
+.modal {
 	&.is-overlay {
 		@include center();
 		position: relative;
@@ -19,77 +22,144 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
-			opacity: 0.35;
+			opacity: 0.25;
 			z-index: 1;
 		}
 	}
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
 	.modal {
 		&.is-overlay {
-			display: block;
+			align-items: flex-start;
+			justify-content: center;
 
 			&::before {
-				content: '';
 				display: none;
 			}
 		}
 	}
 }
+@media screen and (min-width: 701px) {
+	.modal {
+		&.is-overlay {
+			padding: 3.2rem;
+		}
+	}
+}
+
+// modal wrapper
 
 .m-wrapper {
 	display: block;
 	width: 100%;
 	max-width: 40rem;
-	margin-top: 2.4rem;
+	margin-top: 2rem;
 	margin-right: auto;
 	margin-left: auto;
 	background-color: $WHITE;
-	border-radius: 2.4rem;
+	border-radius: 1.6rem;
 	z-index: 5;
 }
-@media screen and (max-width: 500px) {
-	.m-wrapper {
-		max-width: 100%;
-	}
-}
+
+// modal wrapper large
 
 .m-wrapper {
 	&.m-wrapper--lg {
 		width: 100%;
-	}
-}
-@media screen and (min-width: 500px) {
-	.m-wrapper {
-		&.m-wrapper--lg {
-			max-width: 58rem;
-			margin: 0;
-		}
+		max-width: 60rem;
+		height: 100%;
+		margin: 0;
+		padding-top: 1.2rem;
 	}
 }
 
-.modal__main {
-	padding: 1.2rem 0;
-}
+// form
 
 .form {
 	position: relative;
-	margin: 0 1.6rem;
+	padding: 0 1.6rem;
+	margin: 0 1.4rem;
+
+	> .btn {
+		margin: 1.2rem 0;
+	}
 }
 
 .modal__form {
 	@include center(column);
+	justify-content: flex-start;
+	align-items: flex-start;
 	width: 100%;
+	padding: 0 0.2rem;
+}
 
-	> .btn {
-		margin: 1.2rem;
+// header
+
+.modal__header {
+	display: inline-block;
+	width: 100%;
+	padding: 0 0.2rem;
+
+	.header__icon {
+		display: inline-block;
+		width: 100%;
+	}
+	.header__icon * {
+		fill: $BRAND_BLUE;
 	}
 }
 
+.modal__header {
+	&.modal__header--lg {
+		min-height: 5.3rem;
+	}
+}
+
+.modal__header {
+	&.modal__header--lg {
+		.header__icon {
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+
+// header btn
+
+.form {
+	.header__btn {
+		position: absolute;
+		top: 0;
+		right: 0.2rem;
+	}
+}
+
+.modal__title {
+	@include font-display();
+	font-size: map-get($FONT_SIZE_DISPLAY, LARGE);
+	line-height: 1;
+	margin-top: 3.2rem;
+	margin-bottom: 1.4rem;
+}
+
+.modal__subtitle {
+	font-family: inherit;
+	font-size: map-get($FONT_SIZE_DISPLAY, MEDIUM);
+	font-weight: map-get($FONT_WEIGHT, BOLD);
+	line-height: 1.2;
+	margin-top: 2.4rem;
+	margin-bottom: 1.6rem;
+}
+
+// modal__form > form__group
+
 .form__group {
-	display: inline-block;
-	align-self: flex-start;
-	padding-right: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	min-height: 6rem;
+	// align-self: flex-start;
 
 	&:not(:first-of-type) {
 		margin-top: 1.2rem;
@@ -100,61 +170,30 @@
 	.header__copy {
 		@include font-default(BOLD);
 		font-size: map-get($FONT_SIZE_DEFAULT, DEFAULT);
-		margin-bottom: 0.4rem;
 	}
 
 	.details__copy {
 		color: $GREY_513;
-		font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
+		font-size: map-get($FONT_SIZE_DEFAULT, DEFAULT);
 		margin-bottom: 0.4rem;
 		line-height: 1.4;
+		overflow-wrap: break-word;
 	}
-}
-
-.modal__header {
-	display: inline-block;
-	width: 100%;
-
-	.header__icon {
-		display: inline-block;
-		width: 100%;
-
-		&.header__icon--center {
-			display: flex;
-			justify-content: center;
-		}
-	}
-
-	.header__icon * {
-		fill: $BRAND_BLUE;
-	}
-}
-
-.form {
-	.header__btn {
-		position: absolute;
-		top: 0.25rem;
-		right: 0;
-	}
-}
-
-.modal__title {
-	@include font-display();
-	font-size: map-get($FONT_SIZE_DISPLAY, LARGE);
-	line-height: 1.15;
-	letter-spacing: -0.05rem;
-	padding: 0;
-	margin: 3.2rem 0 1.2rem;
 }
 
 // label
 
 .label-wrapper {
 	position: relative;
-	display: inline-block;
+	display: flex;
+	align-items: flex-end;
+	justify-content: stretch;
 	width: 100%;
-	min-height: 5.8rem;
-	padding: 1.2rem 0.8rem 0.8rem;
+	height: 6rem;
+	padding-top: 1.2rem;
+	padding-right: 0.8rem;
+	padding-bottom: 0.8rem;
+	padding-left: 0.8rem;
 	margin: 1.2rem 0;
 	border: 1px solid $GREY_214;
 	border-radius: 0.4rem;
@@ -170,35 +209,19 @@
 }
 
 .label-wrapper__group {
-	display: flex;
-	grid-auto-columns: minmax(auto, 1fr);
-	grid-template-columns: repeat(minmax(auto, 1fr), 3);
-	column-gap: 1.8rem;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	column-gap: 1.2rem;
 	width: 100%;
-}
-
-// input
-
-.modal__form-input {
-	display: block;
-	color: $BLACK_185;
-	font-size: map-get($FONT_SIZE_DEFAULT, MEDIUM);
-	width: 100%;
-	margin-top: 1.2rem;
-	padding: 0 0.15rem;
-	line-height: 1.2rem;
-	border: none;
-	outline: none;
-
-	&:focus {
-		outline: none;
-	}
 }
 
 // placeholder
 
 .label-wrapper__placeholder {
-	margin-top: auto;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	width: 100%;
 }
 
 .label-wrapper {
@@ -207,6 +230,7 @@
 		display: inline-block;
 		color: $GREY_513;
 		font-size: map-get($FONT_SIZE_DEFAULT, MEDIUM);
+		line-height: 1.2;
 		top: 50%;
 		left: 0.8rem;
 		transform: translateY(-50%);
@@ -219,15 +243,90 @@
 		.placeholder {
 			color: $BRAND_BLUE;
 			font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
-			top: 0.8rem;
+			top: 1rem;
+			transform: translateY(0);
+		}
+	}
+
+	.placeholder {
+		&.fixed {
+			font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
+			top: 1rem;
 			transform: translateY(0);
 		}
 	}
 }
 
+// input counter
+
+.label-wrapper {
+	.input-counter {
+		position: absolute;
+		display: none;
+		color: $GREY_513;
+		font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
+		top: 0.8rem;
+		right: 0.85rem;
+	}
+
+	&:focus-within {
+		.input-counter {
+			display: block;
+		}
+	}
+}
+
+// input
+
+// [type='select'].modal__form-input {
+// 	appearance: none;
+// }
+
+.modal__form-input {
+	display: inline-block;
+	color: $BLACK_185;
+	font-size: map-get($FONT_SIZE_DEFAULT, MEDIUM);
+	width: 100%;
+	height: 2.2rem;
+	margin-top: 1.6rem;
+	padding: 0 0.15rem;
+	padding-right: 2.6rem;
+	background: none;
+	line-height: 2.2rem;
+	border: none;
+	outline: none;
+	flex: 1 1 100%;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+// label icon
+
+.label-wrapper {
+	.icon {
+		position: absolute;
+		top: 50%;
+		right: 1.2rem;
+		transform: translateY(-50%);
+		fill: $GREY_214;
+		z-index: 1;
+	}
+
+	&:focus-within {
+		.icon {
+			fill: $BRAND_BLUE;
+		}
+	}
+}
+
+// bottom links
+
 .modal__links {
 	@include center();
 	color: $GREY_513;
+	margin-top: 2.4rem;
 }
 
 .modal__link__item {
