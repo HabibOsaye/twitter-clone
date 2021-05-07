@@ -2,44 +2,65 @@
 
 .icon {
 	display: inline-block;
-	max-width: 5.6rem;
+	width: auto;
 	height: auto;
 	flex: 0 auto;
 }
 
 // SIZE
 
-// small
 .icon {
-	&.icon--sm {
-		max-width: 2.4rem;
+	&.icon-xxs {
+		height: 1.375rem;
 	}
 }
 
-// medium
 .icon {
-	&.icon--md {
-		max-width: 3.2rem;
+	&.icon-xs {
+		height: 1.875rem;
 	}
 }
 
-// large
 .icon {
-	&.icon--lg {
-		width: 4rem;
+	&.icon-sm {
+		height: 2.25rem;
 	}
 }
 
-// xlarge
 .icon {
-	&.icon--xl {
-		width: 5.6rem;
+	&.icon-md {
+		height: 2.625rem;
 	}
 }
 
-// xxlarge
 .icon {
-	&.icon--xxl {
-		width: 7.2rem;
+	&.icon-lg {
+		height: 3.2rem;
+	}
+}
+
+.icon {
+	&.icon-xl {
+		height: 4rem;
+	}
+}
+
+.icon {
+	&.icon-xxl {
+		height: 4.5rem;
+	}
+}
+
+.icon {
+	&.icon-xxxl {
+		height: 5.3rem;
+	}
+}
+
+// MODIFIER
+
+.icon {
+	&.icon--fill {
+		fill: $BRAND_BLUE;
 	}
 }
