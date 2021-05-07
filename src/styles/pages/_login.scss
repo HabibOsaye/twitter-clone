@@ -81,7 +81,7 @@
 	margin: 0 1.4rem;
 
 	> .btn {
-		margin: 1.2rem 0;
+		margin: 1.6rem 0;
 	}
 }
 
@@ -111,7 +111,7 @@
 
 .modal__header {
 	&.modal__header--lg {
-		min-height: 5.3rem;
+		height: 5.3rem;
 	}
 }
 
@@ -326,7 +326,7 @@
 .modal__links {
 	@include center();
 	color: $GREY_513;
-	margin-top: 2.4rem;
+	margin-top: 3.2rem;
 }
 
 .modal__link__item {
