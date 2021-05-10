@@ -17,12 +17,11 @@ body {
 
 body {
 	color: $BLACK_185;
-	font-family: 'Roboto', $FONT_FALLBACK;
+	font-family: $FONT_FALLBACK;
+	font-size: map-get($FONT_SIZE_DEFAULT, DEFAULT);
 	-moz-osx-font-smoothing: $FONT_SMOOTHING_MOZ;
 	-webkit-font-smoothing: $FONT_SMOOTHING_WEBKIT;
 	text-rendering: $FONT_SMOOTHING_RENDERING;
-	width: 100%;
-	height: 100%;
-	font-size: 1.6rem;
-	line-height: 1.15;
+	// line-height: 1.15;
+	line-height: 2rem;
 }

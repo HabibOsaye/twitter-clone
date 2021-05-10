@@ -1,0 +1,99 @@
+.t-copy {
+	@include font-default(NORMAL);
+	font-size: map-get($FONT_SIZE_DEFAULT, DEFAULT);
+	line-height: 2rem;
+}
+
+.t-link {
+	display: inline-block;
+	text-decoration: none;
+
+	&:active,
+	&:visited,
+	&:hover,
+	&:focus {
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+// copy
+
+.t-bold {
+	@include font-default(BOLD);
+	line-height: 2rem;
+}
+
+.t-copy-title {
+	@include font-default(BOLD);
+	font-size: map-get($FONT_SIZE_DEFAULT, MEDIUM);
+	line-height: 2rem;
+}
+
+.t-copy-header-bold {
+	font-family: inherit;
+	@include font-default(DISPLAY);
+	font-size: map-get($FONT_SIZE_DEFAULT, LARGE);
+	line-height: 2.4rem;
+}
+
+// size
+
+.t-sm {
+	@include font-default(NORMAL);
+	font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
+	line-height: 1.6rem;
+}
+
+// type
+
+.t-primary {
+	color: $BRAND_BLUE;
+	text-decoration: none;
+}
+
+.t-secondary {
+	color: $GREY_513;
+	text-decoration: none;
+}
+
+// state
+
+.t-hover {
+	text-decoration: none;
+
+	// &:active,
+	// &:visited {
+	// 	color: currentColor;
+	// }
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: none;
+		text-decoration: underline;
+	}
+}
+
+.t-hover-alt {
+	text-decoration: none;
+	text-decoration-color: $BLACK_185;
+
+	&:active,
+	&:visited {
+		color: currentColor;
+	}
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: none;
+		text-decoration: underline;
+	}
+}

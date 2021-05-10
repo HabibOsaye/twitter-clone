@@ -1,9 +1,6 @@
 @import '../settings/colors';
-@import '../settings/dimensions';
 @import '../settings/type';
 @import '../settings/global';
-@import 'breakpoints';
-@import 'functions';
 
 /* ============ @MIXINS ============ */
 // flex
@@ -29,10 +26,3 @@
 	font-weight: map-get($FONT_WEIGHT, $--FONT_WEIGHT);
 	font-style: map-get($FONT_DEFAULT, FONT_STYLE);
 }
-
-// $FONT_WEIGHT: (
-// 	NORMAL: 400,
-// 	MEDIUM: 500,
-// 	BOLD: 650,
-// 	DISPLAY: 900,
-// );
