@@ -1,66 +1,73 @@
-// ICONS
-
+// ICON
 .icon {
-	display: inline-block;
-	width: auto;
-	height: auto;
-	flex: 0 auto;
+	box-sizing: content-box;
+	fill: currentColor;
 }
 
-// SIZE
+// btn-icon
 
-.icon {
-	&.icon-xxs {
-		height: 1.375rem;
-	}
+.btn-icon-xs {
+	width: 1.875rem;
+	height: 1.875rem;
+}
+.btn-icon-sm {
+	width: 2.25rem;
+	height: 2.25rem;
+}
+.btn-icon-md {
+	width: 2.625rem;
+	height: 2.625rem;
+}
+.btn-icon-lg {
+	width: 3rem;
+	height: 3rem;
 }
 
-.icon {
-	&.icon-xs {
-		height: 1.875rem;
-	}
+// icon
+
+.icon-xs {
+	width: 1.875rem;
+	height: 1.875rem;
+}
+.icon-sm {
+	width: 2.25rem;
+	height: 2.25rem;
+}
+.icon-md {
+	width: 2.5rem;
+	height: 2.5rem;
 }
 
-.icon {
-	&.icon-sm {
-		height: 2.25rem;
-	}
+// header-icon
+
+.header-icon-sm {
+	width: 3.2rem;
+	height: 3.2rem;
 }
 
-.icon {
-	&.icon-md {
-		height: 2.625rem;
-	}
+.header-icon-md {
+	width: 4rem;
+	height: 4rem;
 }
 
-.icon {
-	&.icon-lg {
-		height: 3.2rem;
-	}
+.header-icon-lg {
+	width: 4.5rem;
+	height: 4.5rem;
 }
 
-.icon {
-	&.icon-xl {
-		height: 4rem;
-	}
+// colors
+
+.icon-fill-brand {
+	color: $BRAND_BLUE;
+	fill: currentColor;
 }
 
-.icon {
-	&.icon-xxl {
-		height: 4.5rem;
-	}
+.icon-primary {
+	color: $BRAND_BLUE;
+	fill: currentColor;
 }
 
-.icon {
-	&.icon-xxxl {
-		height: 5.3rem;
-	}
-}
-
-// MODIFIER
-
-.icon {
-	&.icon--fill {
-		fill: $BRAND_BLUE;
-	}
+.icon-secondary {
+	color: $GREY_513;
+	fill: currentColor;
 }
