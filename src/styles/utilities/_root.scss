@@ -24,4 +24,6 @@ body {
 	text-rendering: $FONT_SMOOTHING_RENDERING;
 	// line-height: 1.15;
 	line-height: 2rem;
+	background-color: rgb(255, 255, 255);
+	scrollbar-color: rgb(170, 184, 194) rgb(247, 249, 250);
 }
