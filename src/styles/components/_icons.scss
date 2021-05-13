@@ -6,18 +6,26 @@
 
 // btn-icon
 
+.btn-icon-xxs {
+	width: 1.3rem;
+	height: 1.3rem;
+}
+
 .btn-icon-xs {
 	width: 1.875rem;
 	height: 1.875rem;
 }
+
 .btn-icon-sm {
 	width: 2.25rem;
 	height: 2.25rem;
 }
+
 .btn-icon-md {
 	width: 2.625rem;
 	height: 2.625rem;
 }
+
 .btn-icon-lg {
 	width: 3rem;
 	height: 3rem;
@@ -25,14 +33,21 @@
 
 // icon
 
+.icon-xxs {
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
 .icon-xs {
 	width: 1.875rem;
 	height: 1.875rem;
 }
+
 .icon-sm {
 	width: 2.25rem;
 	height: 2.25rem;
 }
+
 .icon-md {
 	width: 2.5rem;
 	height: 2.5rem;
@@ -56,11 +71,6 @@
 }
 
 // colors
-
-.icon-fill-brand {
-	color: $BRAND_BLUE;
-	fill: currentColor;
-}
 
 .icon-primary {
 	color: $BRAND_BLUE;

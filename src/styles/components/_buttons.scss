@@ -45,10 +45,10 @@
 .btn-sm {
 	font-size: map-get($FONT_SIZE_BTN, DEFAULT);
 	font-weight: map-get($FONT_WEIGHT, BOLD);
-	max-width: 8.5rem;
+	min-width: 7.8rem;
 	height: 3rem;
 	min-height: 3rem;
-	padding: 0.8rem 1.2rem;
+	padding: 0.8rem 1.5rem;
 }
 
 .btn-md {
@@ -178,7 +178,89 @@
 	}
 }
 
-// TAB / BUTTON GROUPS
+.btn-no-label {
+	@include center();
+	display: inline-flex;
+	@include font-default(NORMAL);
+	white-space: nowrap;
+	padding: 0;
+	background: none;
+	background-color: transparent;
+	border: 0px solid transparent;
+	border-radius: 999.9rem;
+	box-shadow: $OUTLINE_FOCUS_NONE;
+	outline: none;
+	cursor: pointer;
+	overflow: hidden;
+	user-select: none;
+	transition: background-color $TRANSITION_SPEED $TRANSITION_EASE,
+		box-shadow $TRANSITION_SPEED $TRANSITION_EASE;
+
+	&:hover {
+		background-color: $BTN_SECONDARY_HOVER;
+		cursor: pointer;
+
+		svg {
+			color: $BRAND_BLUE;
+			fill: currentColor;
+		}
+	}
+
+	&:active {
+		background-color: $BTN_SECONDARY_HOVER;
+		box-shadow: $OUTLINE_FOCUS_ACTIVE;
+	}
+
+	&:focus {
+		background-color: $BTN_SECONDARY_HOVER;
+		box-shadow: $OUTLINE_FOCUS_ACTIVE;
+		outline: none;
+
+		svg {
+			color: $BRAND_BLUE;
+			fill: currentColor;
+		}
+	}
+}
+
+// size
+
+.btn-rnd-sm {
+	width: 3.475rem;
+	min-width: 3.475rem;
+	height: 3.475rem;
+	min-height: 3.475rem;
+
+	&:active {
+		box-shadow: $OUTLINE_FOCUS_INSET_ACTIVE;
+	}
+
+	&:focus {
+		box-shadow: $OUTLINE_FOCUS_INSET_ACTIVE;
+	}
+}
+
+.btn-rnd-md {
+	width: 4rem;
+	min-width: 4rem;
+	height: 4rem;
+	min-height: 4rem;
+
+	&:active {
+		box-shadow: $OUTLINE_FOCUS_INSET_ACTIVE;
+	}
+
+	&:focus {
+		box-shadow: $OUTLINE_FOCUS_INSET_ACTIVE;
+	}
+}
+
+.btn-rnd-lg {
+	width: 4.6rem;
+	min-width: 4.6rem;
+	height: 4.6rem;
+	min-height: 4.6rem;
+}
 
 .btn-tab {
 	@include center();
@@ -205,6 +287,7 @@
 
 	&:active {
 		background-color: $BTN_SECONDARY_HOVER;
+		box-shadow: $OUTLINE_FOCUS_ACTIVE;
 	}
 
 	&:focus {
@@ -225,7 +308,8 @@
 		text-decoration: none;
 		cursor: pointer;
 
-		* svg {
+		svg {
+			color: $BRAND_BLUE;
 			fill: currentColor;
 		}
 	}
@@ -242,7 +326,8 @@
 		box-shadow: $OUTLINE_FOCUS_ACTIVE;
 		outline: none;
 
-		* svg {
+		svg {
+			color: $BRAND_BLUE;
 			fill: currentColor;
 		}
 	}
@@ -251,13 +336,17 @@
 .btn-tab-group {
 	display: flex;
 	color: $GREY_513;
+	font-size: map-get($FONT_SIZE_BTN, DEFAULT);
+	font-weight: map-get($FONT_WEIGHT, BOLD);
 	height: 5.3rem;
 	background-color: transparent;
 	border-radius: 0;
 	text-decoration: none;
-	border-bottom: 0.2rem solid $BRAND_BLUE;
+	border-bottom: 0.1rem solid $GREY_BORDER;
+	flex-grow: 1;
 
 	&:hover {
+		color: $BRAND_BLUE;
 		background-color: $BTN_SECONDARY_HOVER;
 		text-decoration: none;
 		cursor: pointer;
@@ -271,23 +360,7 @@
 	&:focus {
 		background-color: transparent;
 		text-decoration: none;
-		box-shadow: $OUTLINE_FOCUS_ACTIVE;
+		box-shadow: $OUTLINE_FOCUS_INSET_ACTIVE;
 		outline: none;
 	}
-}
-
-// size
-
-.btn-tab-home {
-	width: 4.6rem;
-	min-width: 4.6rem;
-	height: 4.6rem;
-	min-height: 4.6rem;
-}
-
-.btn-tab-nav {
-	width: 4rem;
-	min-width: 4rem;
-	height: 4rem;
-	min-height: 4rem;
 }

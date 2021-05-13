@@ -40,7 +40,6 @@
 // size
 
 .t-sm {
-	@include font-default(NORMAL);
 	font-size: map-get($FONT_SIZE_DEFAULT, SMALL);
 	line-height: 1.6rem;
 }
@@ -62,11 +61,6 @@
 .t-hover {
 	text-decoration: none;
 
-	// &:active,
-	// &:visited {
-	// 	color: currentColor;
-	// }
-
 	&:hover {
 		cursor: pointer;
 		text-decoration: underline;
@@ -82,11 +76,6 @@
 	text-decoration: none;
 	text-decoration-color: $BLACK_185;
 
-	&:active,
-	&:visited {
-		color: currentColor;
-	}
-
 	&:hover {
 		cursor: pointer;
 		text-decoration: underline;
@@ -96,4 +85,12 @@
 		outline: none;
 		text-decoration: underline;
 	}
+}
+
+// overflow
+
+.t-overflow-hidden {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
